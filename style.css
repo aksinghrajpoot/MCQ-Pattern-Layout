@@ -1,0 +1,45 @@
+body{font-family: sans-serif;}
+h1,h2,h3,h4,h5,h6{margin: 5px 0;}
+li{
+    list-style-type: lower-alpha;
+}
+.show {
+    background-color: #546e7a;
+    color: #f1f1f1;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-top: 5px;
+    width: auto;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 500;
+    transition: 0.4s;
+}
+.show:before{
+	content:'\1F441';
+	margin-right:5px;
+}
+.show:after{
+	content:'Show Answer';
+}
+.active, .show:hover {
+  background-color: #162791; 
+}
+.box {
+  padding: 0px 5px;
+  margin: 5px 0;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+  border-left: 4px solid #162791;
+}
+.box p{margin: 0;font-size: 14px;}
+.box p:before {font-weight:600;}
+.box p:nth-child(1):before {
+	content:'Answer: ';
+}
+.box p:nth-child(2):before {
+	content:'Explanation: ';
+}
