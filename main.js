@@ -1,20 +1,18 @@
-//adding <button class='show'> </button> before all the elments with (.box) class
-function insertBefore(el, referenceNode) {
-  referenceNode.parentNode.insertBefore(el, referenceNode);
-}
-var ref = document.querySelector(".box");
-var newEl = document.createElement('button');
-newEl.className += "show";
-ref.parentNode.insertBefore(newEl, ref);
+//$( "<p>Test</p>" ).insertBefore( ".box" );
 
+let find = document.querySelectorAll(".box");
+for (let i = 0; i < find.length; i++) {
+find[i].insertAdjacentHTML('beforebegin', "<button class='show'>Show Answer</button>");
+find[i].insertAdjacentHTML('afterend', "<hr style='border-color: #0000001a;'><br>");
+}
 
 // show answer click event
-var show = document.getElementsByClassName("show");
-var i;
+let show = document.getElementsByClassName("show");
+let i;
 for (i = 0; i < show.length; i++) {
   show[i].addEventListener("click", function() {
     this.classList.toggle("active");
-    var box = this.nextElementSibling;
+    let box = this.nextElementSibling;
     if (box.style.display === "block") {
       box.style.display = "none";
     } else {
