@@ -3,7 +3,7 @@
 let find = document.querySelectorAll(".box");
 for (let i = 0; i < find.length; i++) {
 find[i].insertAdjacentHTML('beforebegin', "<button class='show'>Show Answer</button>");
-find[i].insertAdjacentHTML('afterend', "<hr style='border-color: #0000001a;'><br>");
+find[i].insertAdjacentHTML('afterend', "<hr style='border-color: #0000001a;margin:10px'>");
 }
 
 // show answer click event
