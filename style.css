@@ -34,10 +34,10 @@ li{
   border-left: 3px solid #162791;
 }
 .box p{margin: 0;font-size: 14px;}
-.box p:before {font-weight:600;}
-.box p:nth-child(1):before {
+.box:before,.box p:before {font-weight:600;}
+.box:before {
 	content:'Answer: ';
 }
-.box p:nth-child(2):before {
+.box p:before {
 	content:'Explanation: ';
 }
